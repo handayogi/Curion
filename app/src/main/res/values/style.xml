@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Button">
+        <item name="android:background">
+            @drawable/button
+        </item>
+        <item name="android:textColor">
+            @android:color/white
+        </item>
+    </style>
+
+</resources>

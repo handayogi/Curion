@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "739136996806",
+    "project_id": "curion-login",
+    "storage_bucket": "curion-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739136996806:android:05054623e28e9c4f829ec7",
+        "android_client_info": {
+          "package_name": "com.example.konversimatauang"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYXdFBtnm5f0kVAyERiUE1GLx-8NAQyjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
