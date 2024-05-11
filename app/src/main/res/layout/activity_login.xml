@@ -56,6 +56,7 @@
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/text_font"
                 android:text="@string/forgotPassword"
+                android:textColor="@color/text"
                 android:textAlignment="textEnd" />
 
             <Button

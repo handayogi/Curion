@@ -17,12 +17,12 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            goToMainActivity()
+            goToLogin()
         }, 3000L)
     }
 
-    private fun goToMainActivity() {
-        Intent(this, MainActivity::class.java).also {
+    private fun goToLogin() {
+        Intent(this, Login::class.java).also {
             startActivity(it)
             finish()
         }

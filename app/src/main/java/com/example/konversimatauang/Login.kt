@@ -3,6 +3,7 @@ package com.example.konversimatauang
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -53,6 +54,11 @@ class Login : AppCompatActivity() {
                 return@setOnClickListener
             }
             LoginFirebase(email,pass)
+        }
+
+        val forgot_password = findViewById<TextView>(R.id.forgot_password)
+        forgot_password.setOnClickListener{
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
     }
 
