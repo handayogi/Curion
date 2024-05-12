@@ -12,4 +12,6 @@
     <string name="create">Don`t have account?</string>
     <string name="login_back">Have an account?</string>
     <string name="send">Send Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

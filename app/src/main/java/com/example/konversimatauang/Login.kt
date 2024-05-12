@@ -1,7 +1,10 @@
 package com.example.konversimatauang
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.os.Handler
 import android.util.Patterns
 import android.widget.TextView
 import android.widget.Toast
@@ -18,7 +21,6 @@ class Login : AppCompatActivity() {
 
     lateinit var binding: ActivityLoginBinding
     lateinit var auth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
