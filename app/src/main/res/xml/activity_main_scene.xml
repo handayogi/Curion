@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000"
+        motion:autoTransition="animateToEnd"
+        motion:staggered=".65"
+        motion:motionInterpolator="cubic(0,0,0.7,0.19)">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/buttonGetStarted"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0"
+            motion:transitionEasing="cubic(0.4,0,0.8,0.78)" />
+        <Constraint
+            android:id="@+id/onboardingViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@+id/viewCenterOfNext"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0"
+            motion:transitionEasing="cubic(0.31,0,0.4,0.99)" />
+        <Constraint
+            android:id="@+id/viewCenterOfNext"
+            motion:layout_constraintEnd_toEndOf="@+id/nextImage"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/nextImage"
+            motion:layout_constraintTop_toTopOf="@+id/nextImage"
+            motion:layout_constraintStart_toStartOf="@+id/nextImage"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0"
+            motion:transitionEasing="cubic(1,0,0.8,0.8)" />
+        <Constraint
+            android:id="@+id/indicatorsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            motion:transitionEasing="cubic(1,0.02,1,0)"
+            android:translationX="-10dp"
+            android:alpha="0" />
+        <Constraint
+            android:id="@+id/textSkip"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:alpha="0"
+            android:translationX="10dp"
+            motion:transitionEasing="cubic(1,0,0.8,0.8)" />
+        <Constraint
+            android:id="@+id/view"
+            motion:layout_constraintEnd_toEndOf="@+id/nextImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/nextImage"
+            motion:layout_constraintTop_toTopOf="@+id/nextImage"
+            motion:layout_constraintStart_toStartOf="@+id/nextImage"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0"
+            motion:transitionEasing="cubic(1,0,0.8,0.8)" />
+        <Constraint
+            android:id="@+id/nextImage"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="50dp"
+            motion:layout_constraintBottom_toTopOf="@+id/buttonGetStarted"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:alpha="0"
+            motion:transitionEasing="cubic(1,0,0.8,0.79)" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/onboardingViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="@+id/viewCenterOfNext"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:alpha="1"
+            motion:transitionEasing="cubic(0.6,0,0.6,0.84)" />
+        <Constraint
+            android:id="@+id/buttonGetStarted"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:transitionEasing="cubic(1,0,1,0)"
+            android:alpha="1" />
+        <Constraint
+            android:id="@+id/indicatorsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0,1,0)" />
+        <Constraint
+            android:id="@+id/textSkip"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0,1,0)"
+            android:visibility="visible" />
+        <Constraint
+            android:id="@+id/view"
+            motion:layout_constraintEnd_toEndOf="@+id/nextImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/nextImage"
+            motion:layout_constraintTop_toTopOf="@+id/nextImage"
+            motion:layout_constraintStart_toStartOf="@+id/nextImage"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0,1,0)" />
+        <Constraint
+            android:id="@+id/viewCenterOfNext"
+            motion:layout_constraintEnd_toEndOf="@+id/nextImage"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/nextImage"
+            motion:layout_constraintTop_toTopOf="@+id/nextImage"
+            motion:layout_constraintStart_toStartOf="@+id/nextImage"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0,1,0)" />
+        <Constraint
+            android:id="@+id/nextImage"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="50dp"
+            motion:layout_constraintBottom_toTopOf="@+id/buttonGetStarted"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="1"
+            motion:transitionEasing="cubic(1,0,1,0)" />
+    </ConstraintSet>
+</MotionScene>
