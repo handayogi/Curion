@@ -3,16 +3,12 @@ package com.example.konversimatauang
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Typeface
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.time.ExperimentalTime
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -27,12 +23,12 @@ class SplashScreenActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("AppPreferences", Context.MODE_PRIVATE)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            if (auth.currentUser != null) {
+            if (auth.currentUser!=null) {
                 if (!hasOpenedMainActivityBefore()) {
                     markMainActivityAsOpened()
-                    startActivity(Intent(this, HomeActivity::class.java))
+                    startActivity(Intent(this, MenuActivity::class.java))
                 } else {
-                    goToHome()
+                    goToMenu()
                 }
             } else {
                 goToMainActivity()
@@ -51,8 +47,8 @@ class SplashScreenActivity : AppCompatActivity() {
         editor.apply()
     }
 
-    private fun goToHome() {
-        Intent(this, HomeActivity::class.java).also {
+    private fun goToMenu() {
+        Intent(this, MenuActivity::class.java).also {
             startActivity(it)
             finish()
         }

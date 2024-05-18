@@ -1,11 +1,7 @@
 package com.example.konversimatauang
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -15,8 +11,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.button.MaterialButton
-import com.google.android.material.card.MaterialCardView
-import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -75,24 +69,16 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        if (onboardingViewPager.currentItem == onboardingItemsAdapter.itemCount) {
-            if (auth.currentUser!=null) {
-                startActivity(Intent(this, HomeActivity::class.java))
-            } else {
-                navigateToLogin()
-            }
-        }
-
         findViewById<TextView>(R.id.textSkip).setOnClickListener {
             if (auth.currentUser!=null) {
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(Intent(this, MenuActivity::class.java))
             } else {
                 navigateToLogin()
             }
         }
         findViewById<MaterialButton>(R.id.buttonGetStarted).setOnClickListener {
             if (auth.currentUser!=null) {
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(Intent(this, MenuActivity::class.java))
             } else {
                 navigateToLogin()
             }
