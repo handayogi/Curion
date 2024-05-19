@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingVertical="30dp"
+    android:paddingHorizontal="20dp"
     tools:context=".ConvertFragment">
 
     <TextView
@@ -15,21 +15,91 @@
         android:text="@string/convert"
         android:textAlignment="center"
         android:textColor="@color/text_convert"
-        android:textSize="35sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/description_convert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/description_convert"
-        android:layout_width="280dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
         android:fontFamily="@font/text_font"
         android:text="@string/convert_description"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <EditText
+        android:id="@+id/editFromCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/input_line"
+        android:hint="@string/amount"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="10dp"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_convert" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+    <Spinner
+        android:id="@+id/spFromCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/currency_codes"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editFromCurrency"
+        app:layout_constraintStart_toStartOf="@+id/editFromCurrency"
+        app:layout_constraintTop_toTopOf="@+id/editFromCurrency"/>
+
+    <EditText
+        android:id="@+id/editToCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginVertical="25dp"
+        android:background="@drawable/input_line"
+        android:gravity="end|center_vertical"
+        android:hint="@string/amount"
+        android:inputType="numberDecimal"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFromCurrency" />
+
+    <Spinner
+        android:id="@+id/spToCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/currency_codes"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editToCurrency"
+        app:layout_constraintStart_toStartOf="@+id/editToCurrency"
+        app:layout_constraintTop_toTopOf="@+id/editToCurrency"/>
+
+    <TextView
+        android:id="@+id/tvMarketRate"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginVertical="15dp"
+        android:fontFamily="@font/text_font"
+        tools:text="1 USD = 15,955.0 IDR at the mid-market rate"
+        android:textColor="@color/white"
+        android:gravity="start|center_vertical"
+        android:paddingStart="5dp"
+        android:background="@drawable/shape_background"
+        app:layout_constraintTop_toBottomOf="@+id/editToCurrency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

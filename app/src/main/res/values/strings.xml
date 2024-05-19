@@ -2,7 +2,7 @@
     <string name="app_name">Curion</string>
     <string-array name="currency_codes">
         <item>CAD</item>
-        <item>EUR</item>
+        <item>EUR Euro</item>
         <item>HKD</item>
         <item>ISK</item>
         <item>PHP</item>
@@ -47,7 +47,7 @@
     <string name="create">Don`t have account?</string>
     <string name="login_back">Have an account?</string>
     <string name="send">Send Email</string>
-    <string name="convert">Convert</string>
+    <string name="convert">Currency Convert</string>
     <string name="skip">Skip</string>
     <string name="convert_description">Check live rates, set rate alerts, receive notification and more.</string>
     <string name="amount">Amount</string>
