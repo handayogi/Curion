@@ -57,7 +57,6 @@
         android:id="@+id/spFromCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:entries="@array/currency_codes"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/editFromCurrency"
         app:layout_constraintStart_toStartOf="@+id/editFromCurrency"
@@ -81,25 +80,9 @@
         android:id="@+id/spToCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:entries="@array/currency_codes"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/editToCurrency"
         app:layout_constraintStart_toStartOf="@+id/editToCurrency"
         app:layout_constraintTop_toTopOf="@+id/editToCurrency"/>
-
-    <TextView
-        android:id="@+id/tvMarketRate"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginVertical="15dp"
-        android:fontFamily="@font/text_font"
-        tools:text="1 USD = 15,955.0 IDR at the mid-market rate"
-        android:textColor="@color/white"
-        android:gravity="start|center_vertical"
-        android:paddingStart="5dp"
-        android:background="@drawable/shape_background"
-        app:layout_constraintTop_toBottomOf="@+id/editToCurrency"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
