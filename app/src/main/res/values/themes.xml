@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
 
-        <item name="android:windowBackground" tools:targetApi="l">@color/white</item>
+        <item name="android:windowBackground">@color/white</item>
 
     </style>
 </resources>

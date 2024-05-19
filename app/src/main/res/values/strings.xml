@@ -52,5 +52,6 @@
     <string name="convert_description">Check live rates, set rate alerts, receive notification and more.</string>
     <string name="amount">Amount</string>
     <string name="setNumber">1</string>
+    <string name="logout">Logout</string>
 
 </resources>
