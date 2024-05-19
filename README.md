@@ -62,12 +62,17 @@ Bertindak sebagai perantara antara model dan view.
 Menerima input pengguna dari view dan meminta model untuk melakukan perhitungan konversi.
 Menampilkan hasil konversi dari model ke view.
 b. Entity Relationship Diagram (ERD)
-alt text
+![image](https://github.com/xxxgoy/Curion/assets/110324259/6614210c-7bf3-45ce-8a93-7741e35297d0)
+
 
 c. Time Plan
-alt text
+![image](https://github.com/xxxgoy/Curion/assets/110324259/3687eef8-89e4-4db6-a4f0-193d48965231)
+
 
 Figma
-alt text alt text alt text
+![image](https://github.com/xxxgoy/Curion/assets/110324259/c1f09b2a-f2e1-436c-aa7d-900528096bc8)
+![image](https://github.com/xxxgoy/Curion/assets/110324259/52a186a4-1233-4510-aed8-2774aa3145f4)
+![image](https://github.com/xxxgoy/Curion/assets/110324259/e9065def-14e7-414a-bb7c-b6f656b23bd0)
+
 
 link figma: https://www.figma.com/design/5QYmSwmcQq0i1g06rsSaUM/Konversi-Mata-Uang-Curion?node-id=0-1&t=ZYmcviZSvYnacf10-0
