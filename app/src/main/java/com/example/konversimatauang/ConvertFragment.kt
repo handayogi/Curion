@@ -10,7 +10,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
@@ -28,6 +30,7 @@ class ConvertFragment : Fragment() {
 
     private lateinit var editFromCurrency: EditText
     private lateinit var editToCurrency: EditText
+    private lateinit var btnSwap: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,8 +43,10 @@ class ConvertFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         editFromCurrency = view.findViewById(R.id.editFromCurrency)
         editToCurrency = view.findViewById(R.id.editToCurrency)
+        btnSwap = view.findViewById(R.id.swap_convert)
         spinnerSetup(view)
         textChangedStuff()
+        setupSwapButton()
     }
 
     private fun textChangedStuff() {
@@ -138,6 +143,26 @@ class ConvertFragment : Fragment() {
                 convertedToCurrency = parent?.getItemAtPosition(position).toString()
                 getApiResult()
             }
+        }
+    }
+
+    private fun setupSwapButton() {
+        btnSwap.setOnClickListener {
+            val temp = baseCurrency
+            baseCurrency = convertedToCurrency
+            convertedToCurrency = temp
+
+            val fromSpinner: Spinner = requireView().findViewById(R.id.spFromCurrency)
+            val toSpinner: Spinner = requireView().findViewById(R.id.spToCurrency)
+
+            val fromPosition =
+                (fromSpinner.adapter as ArrayAdapter<String>).getPosition(baseCurrency)
+            fromSpinner.setSelection(fromPosition)
+            val toPosition =
+                (toSpinner.adapter as ArrayAdapter<String>).getPosition(convertedToCurrency)
+            toSpinner.setSelection(toPosition)
+
+            getApiResult()
         }
     }
 }
