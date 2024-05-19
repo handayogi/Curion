@@ -3,12 +3,19 @@ a. Short Description
 Aplikasi konversi mata uang adalah alat digital yang dirancang untuk membantu pengguna menghitung dan memahami nilai tukar antara berbagai jenis mata uang. Dengan kemajuan teknologi dan globalisasi, kebutuhan untuk memiliki akses cepat dan akurat terhadap informasi nilai tukar mata uang menjadi semakin penting bagi individu dan organisasi di seluruh dunia.
 
 b. Project Team
+
 Louis Paskalis Ginting 121140066
+
 Handayogi Tambunan 121140114
+
 Rio Aditya 121140140
+
 Yanto Pernando Halomoan Hutapea 121140127
+
 Maleakhi Pratama Tobing 121140225
+
 Propossed Application
+
 a. Aplication Description
 Berikut adalah beberapa fitur umum yang terdapat pada aplikasi konversi mata uang:
 
@@ -25,6 +32,7 @@ Nilai tukar: Anda dapat melihat nilai tukar yang digunakan untuk melakukan konve
 Profile:
 
 Halaman profil adalah tempat di mana pengguna dapat melihat dan mengubah informasi pribadi. Ini mencakup foto profil dan data diri pengguna.
+
 b. Application Advantages
 Beberapa adalah keunggulan aplikasi ini adalah
 
@@ -47,6 +55,7 @@ Dengan aplikasi konversi mata uang, individu dan bisnis dapat merencanakan keuan
 Memudahkan wisatawan atau mereka yang sering bepergian ke negara-negara dengan mata uang yang berbeda, aplikasi konversi mata uang adalah alat yang sangat berguna.
 Bagi sebuah perusahaan yang beroperasi secara internasional, aplikasi konversi mata uang membantu membuka peluang untuk mengeksplorasi pasar baru dan menjalankan operasi lintas batas dengan lebih efisien.
 System Planning
+
 a. pplication Architecture
 Untuk arsitektur aplikasi, kami menggunakan metode Model-View-Controller (MVC). Berikut adalah contoh arsitekturnya:
 
@@ -68,6 +77,7 @@ b. Entity Relationship Diagram (ERD)
 
 
 c. Time Plan
+
 ![image](https://github.com/xxxgoy/Curion/assets/110324259/3687eef8-89e4-4db6-a4f0-193d48965231)
 
 
