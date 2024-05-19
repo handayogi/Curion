@@ -61,12 +61,15 @@ Controller:
 Bertindak sebagai perantara antara model dan view.
 Menerima input pengguna dari view dan meminta model untuk melakukan perhitungan konversi.
 Menampilkan hasil konversi dari model ke view.
+
 b. Entity Relationship Diagram (ERD)
 ![image](https://github.com/xxxgoy/Curion/assets/110324259/6614210c-7bf3-45ce-8a93-7741e35297d0)
 
 
+
 c. Time Plan
 ![image](https://github.com/xxxgoy/Curion/assets/110324259/3687eef8-89e4-4db6-a4f0-193d48965231)
+
 
 
 Figma
