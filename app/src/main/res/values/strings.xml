@@ -347,7 +347,7 @@
     <string name="skip">Skip</string>
     <string name="convert_description">Check live rates, set rate alerts, receive notification and more.</string>
     <string name="amount">Amount</string>
-    <string name="setNumber">1</string>
     <string name="logout">Logout</string>
+    <string name="latest_usd_currency_rates">Latest USD Currency Rates</string>
 
 </resources>
