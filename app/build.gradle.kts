@@ -57,7 +57,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview.android)
     implementation("androidx.compose.foundation:foundation-android:1.6.7")
     implementation("androidx.compose.material3:material3-android:1.2.1")
-    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation("com.diogobernardino:williamchart:3.11.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -75,6 +75,7 @@ dependencies {
     kapt("androidx.hilt:hilt-compiler:1.2.0")
 
     // Retrofit
+    implementation("com.google.code.gson:gson:2.10.1")
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")

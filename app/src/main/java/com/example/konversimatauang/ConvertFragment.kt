@@ -33,7 +33,8 @@ class ConvertFragment : Fragment() {
     private lateinit var btnSwap: ImageView
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_convert, container, false)
@@ -52,7 +53,7 @@ class ConvertFragment : Fragment() {
     private fun textChangedStuff() {
         editFromCurrency.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if (s != null && s.isNotEmpty()) {
+                if (s != null && s.isNotEmpty() && s.isNotBlank()) {
                     getApiResult()
                 }
             }

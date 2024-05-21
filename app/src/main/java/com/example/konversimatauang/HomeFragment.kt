@@ -5,96 +5,57 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.github.mikephil.charting.charts.LineChart
-import com.github.mikephil.charting.components.Description
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.net.URL
-import javax.net.ssl.HttpsURLConnection
+import com.example.konversimatauang.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
-    private lateinit var lineChart: LineChart
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_home, container, false)
-        lineChart = rootView.findViewById(R.id.lineChart)
-        fetchCurrencyData()
-        return rootView
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    private fun fetchCurrencyData() {
-        val baseUrl = "https://v6.exchangerate-api.com/v6/424b60014bc4901886ddb931/latest/USD"
-
-        GlobalScope.launch(Dispatchers.IO) {
-            try {
-                val url = URL(baseUrl)
-                val connection = url.openConnection() as HttpsURLConnection
-                connection.requestMethod = "GET"
-
-                val response = StringBuilder()
-                BufferedReader(InputStreamReader(connection.inputStream)).use {
-                    var inputLine = it.readLine()
-                    while (inputLine != null) {
-                        response.append(inputLine)
-                        inputLine = it.readLine()
-                    }
-                }
-
-                val jsonResponse = JSONObject(response.toString())
-                val rates = jsonResponse.getJSONObject("conversion_rates")
-
-                val currencyList = mutableListOf<Entry>()
-                var i = 0f
-
-                val keys = rates.keys().asSequence().toList().sorted().take(5)
-                keys.forEach { key ->
-                    val rate = rates.getDouble(key).toFloat()
-                    currencyList.add(Entry(i++, rate))
-                }
-
-                showChart(currencyList)
-
-            } catch (e: Exception) {
-                e.printStackTrace()
-                activity?.runOnUiThread {
-                    Toast.makeText(requireContext(), "Failed to fetch data", Toast.LENGTH_SHORT).show()
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.apply {
+            lineChart.gradientFillColors = intArrayOf(
+                Color.parseColor("#81FFFFFF"),
+                Color.TRANSPARENT
+            )
+            lineChart.animation.duration = animationDuration
+            lineChart.animate(lineSet)
         }
     }
 
-    private fun showChart(currencyList: List<Entry>) {
-        val lineDataSet = LineDataSet(currencyList, "Currency")
-        lineDataSet.color = Color.BLUE
-        lineDataSet.setDrawValues(false)
-
-        val dataSets = mutableListOf<ILineDataSet>()
-        dataSets.add(lineDataSet)
-
-        val lineData = LineData(dataSets)
-
-        activity?.runOnUiThread {
-            lineChart.data = lineData
-
-            val description = Description()
-            description.text = "Currency Rate Chart"
-            lineChart.description = description
-
-            lineChart.invalidate()
-        }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
+
+    companion object {
+        private val lineSet = listOf(
+            "label1" to 5f,
+            "label2" to 4.5f,
+            "label3" to 4.7f,
+            "label4" to 3.5f,
+            "label5" to 3.6f,
+            "label6" to 7.5f,
+            "label7" to 7.5f,
+            "label8" to 10f,
+            "label9" to 5f,
+            "label10" to 6.5f,
+            "label11" to 3f,
+            "label12" to 4f
+        )
+
+        private const val animationDuration = 1000L
+    }
+
 }

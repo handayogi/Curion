@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    tools:context=".HomeFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/my_font"
-        android:paddingStart="10dp"
-        android:textSize="20sp"
-        android:textColor="@color/text_convert"
-        android:text="@string/latest_usd_currency_rates" />
-
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
-        android:background="@color/tab_color"
-        app:cardCornerRadius="10dp">
+        android:padding="10dp">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tvCurrency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="@color/tab_color"
-            android:paddingStart="10dp"
-            android:orientation="horizontal">
+            android:fontFamily="@font/my_font"
+            android:text="@string/USD"
+            android:textSize="24sp"
+            android:textColor="@color/text_convert"
+            android:paddingStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.7" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/text_font"
-                android:text="United State Dollar"
-                android:textSize="16sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="60dp"/>
+        <com.db.williamchart.view.LineChartView
+            android:id="@+id/lineChart"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:paddingEnd="2dp"
+            app:chart_axis="none"
+            app:chart_gridEffect="dotted"
+            app:chart_lineColor="@color/line_chart"
+            app:chart_lineThickness="3dp"
+            app:chart_smoothLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/lineChart"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginHorizontal="80dp"
-                android:layout_gravity="end|bottom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
