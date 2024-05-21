@@ -87,6 +87,8 @@ Untuk arsitektur aplikasi, kami menggunakan metode Model-View-Controller (MVC). 
 
 link figma: https://www.figma.com/design/5QYmSwmcQq0i1g06rsSaUM/Konversi-Mata-Uang-Curion?node-id=0-1&t=ZYmcviZSvYnacf10-0
 
+link apk : https://drive.google.com/drive/folders/149ef5MbiEELs_4QMp3tXMZPm9yX06iQA?usp=sharing
+
 
 
 
