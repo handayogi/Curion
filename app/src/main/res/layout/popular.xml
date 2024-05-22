@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/backgroundGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/chartPopular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/text_font"
+        android:text="@string/Popular"
+        android:textColor="@color/text"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundGuideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/underlineGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/underline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chartPopular" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/underlineGuideline">
+
+        <TextView
+            android:id="@+id/tvCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/my_font"
+            android:text="@string/USD"
+            android:textColor="@color/colorAccent"
+            android:paddingStart="10dp"
+            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/underlineGuideline" />
+
+        <com.db.williamchart.view.LineChartView
+            android:id="@+id/lineChart"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:paddingEnd="2dp"
+            app:chart_axis="none"
+            app:chart_gridEffect="dotted"
+            app:chart_lineColor="@color/colorPrimaryDark"
+            app:chart_lineThickness="4dp"
+            app:chart_smoothLine="true"
+            android:layout_marginStart="280dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

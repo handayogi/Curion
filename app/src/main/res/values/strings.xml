@@ -350,5 +350,10 @@
     <string name="logout">Logout</string>
     <string name="USD">USD to IDR</string>
     <string name="chart_data">Chart Data</string>
+    <string name="popularCurrency">Popular</string>
+    <string name="Popular">Popular</string>
+    <string name="USD_currencyRate">1 USD = 15,992.5 IDR</string>
+    <string name="EUR">EUR to USD</string>
+    <string name="EUR_currencyRate">1 EUR = 1.08435 USD</string>
 
 </resources>
