@@ -69,7 +69,7 @@
         <com.db.williamchart.view.LineChartView
             android:id="@+id/lineChart"
             android:layout_width="70dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_gravity="center_vertical|end"
             app:chart_axis="none"
             app:chart_gridEffect="dotted"
@@ -113,7 +113,7 @@
         <com.db.williamchart.view.LineChartView
             android:id="@+id/lineChart2"
             android:layout_width="70dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_gravity="center_vertical|end"
             app:chart_axis="none"
             app:chart_gridEffect="dotted"
