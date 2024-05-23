@@ -2,14 +2,17 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="text">#71A3E6</color>
+    <color name="text">#EEEEEE</color>
     <color name="loading">#B4D4FF</color>
-    <color name="background">#DFF5FF</color>
+    <color name="background">#15151C</color>
     <color name="buttonColor">#3A78C8</color>
     <color name="colorAccent">#B4D4FF</color>
     <color name="colorPrimaryDark">#67C6E3</color>
     <color name="tab_color">#40A2E3</color>
-    <color name="text_convert">#1F2261</color>
-    <color name="shape">#727B83</color>
-    <color name="line_chart">#3C81E8</color>
+    <color name="text_convert">#EEEEEE</color>
+    <color name="text_currency">#D8D8D8</color>
+    <color name="upLineChart">#6BE167</color>
+    <color name="downLineChart">#E16767</color>
+    <color name="inputBorder">#76ABAE</color>
+    <color name="menuColor">#1A1A25</color>
 </resources>

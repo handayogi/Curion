@@ -355,5 +355,9 @@
     <string name="USD_currencyRate">1 USD = 15,992.5 IDR</string>
     <string name="EUR">EUR to USD</string>
     <string name="EUR_currencyRate">1 EUR = 1.08435 USD</string>
+    <string name="INR_currencyRate">1 USD = 83.2564 USD</string>
+    <string name="INR">USD to INR</string>
+    <string name="GBP_currencyRate">1 GBP = 1.27255 USD</string>
+    <string name="GBP">GBP to USD</string>
 
 </resources>

@@ -28,6 +28,7 @@
         android:fontFamily="@font/text_font"
         android:text="@string/convert_description"
         android:textAlignment="center"
+        android:textColor="@color/text_currency"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
