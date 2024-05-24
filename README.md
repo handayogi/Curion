@@ -85,9 +85,11 @@ Untuk arsitektur aplikasi, kami menggunakan metode Model-View-Controller (MVC). 
 ![alt text](https://github.com/xxxgoy/Curion/blob/master/2.png)
 ![alt text](https://github.com/xxxgoy/Curion/blob/master/3.png)
 
-link figma: https://www.figma.com/design/5QYmSwmcQq0i1g06rsSaUM/Konversi-Mata-Uang-Curion?node-id=0-1&t=ZYmcviZSvYnacf10-0
+[Figma Application](https://www.figma.com/design/5QYmSwmcQq0i1g06rsSaUM/Konversi-Mata-Uang-Curion?node-id=0-1&t=yMvMlnOLskxMUFdn-1)
 
-link apk : https://drive.google.com/drive/folders/149ef5MbiEELs_4QMp3tXMZPm9yX06iQA?usp=sharing
+[Download Application](https://drive.google.com/drive/folders/1yUqDpvqN34l9C31yP-FtbgUL0qcjRE1H?usp=sharing)
+
+[Link Demo Aplikasi](https://youtu.be/cXXiVdTfDS0)
 
 
 
