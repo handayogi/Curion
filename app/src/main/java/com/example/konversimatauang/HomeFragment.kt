@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.konversimatauang.chart.Chart2Activity
+import com.example.konversimatauang.chart.Chart3Activity
+import com.example.konversimatauang.chart.Chart4Activity
 import com.example.konversimatauang.chart.ChartActivity
 import com.example.konversimatauang.databinding.FragmentHomeBinding
 
@@ -32,13 +35,13 @@ class HomeFragment : Fragment() {
                 startActivity(Intent(requireContext(), ChartActivity::class.java))
             }
             cardView2.setOnClickListener {
-                startActivity(Intent(requireContext(), ChartActivity::class.java))
+                startActivity(Intent(requireContext(), Chart2Activity::class.java))
             }
             cardView3.setOnClickListener {
-                startActivity(Intent(requireContext(), ChartActivity::class.java))
+                startActivity(Intent(requireContext(), Chart3Activity::class.java))
             }
             cardView4.setOnClickListener {
-                startActivity(Intent(requireContext(), ChartActivity::class.java))
+                startActivity(Intent(requireContext(), Chart4Activity::class.java))
             }
 
             val gradientFillColors = intArrayOf(

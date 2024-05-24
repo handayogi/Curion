@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:padding="30dp"
-    tools:context=".chart.ChartActivity">
+    tools:context=".chart.Chart4Activity">
 
     <CheckBox
         android:id="@+id/favImage"
@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.db.williamchart.view.LineChartView
-        android:id="@+id/chart"
+        android:id="@+id/chart4"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         app:chart_grid="horizontal"
-        app:chart_lineColor="@color/upLineChart"
+        app:chart_lineColor="@color/downLineChart"
         app:chart_lineThickness="3dp"
         app:chart_smoothLine="true"
         app:chart_labelsColor="@color/text_currency"

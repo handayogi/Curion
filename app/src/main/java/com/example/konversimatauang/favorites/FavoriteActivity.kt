@@ -18,7 +18,5 @@ class FavoriteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorite)
 
-        context = FavoriteActivity@this
-        favRecyclerView = findViewById(R.id.favRecyclerView)
     }
 }

@@ -58,7 +58,6 @@ dependencies {
     implementation("com.google.android.gms:play-services-location:21.2.0")
     implementation("androidx.compose.foundation:foundation-android:1.6.7")
     implementation("androidx.compose.material3:material3-android:1.2.1")
-    implementation("com.diogobernardino:williamchart:3.11.0")
     implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -85,8 +84,11 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     // RoomDB
+    implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-common:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-rxjava3:2.6.1")
 
     // Activity KTX for viewModels()
     implementation("androidx.activity:activity-ktx:1.9.0")
@@ -108,5 +110,11 @@ dependencies {
     // Coroutines Lifecycle Scopes
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.0")
+
+    //Line Chart
+    implementation("com.diogobernardino:williamchart:3.11.0")
+    implementation("com.diogobernardino.williamchart:tooltip-slider:3.11.0")
+    implementation("com.diogobernardino.williamchart:tooltip-points:3.11.0")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
 }

@@ -98,6 +98,7 @@
             android:id="@+id/swap_convert"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:padding="8dp"
             android:contentDescription="@string/app_name"
             android:background="@drawable/icon_swap_background"
             android:src="@drawable/ic_swap_convert"
