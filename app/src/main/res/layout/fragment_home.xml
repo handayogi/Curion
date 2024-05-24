@@ -7,6 +7,39 @@
     android:padding="15dp"
     tools:context=".HomeFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:text="@string/rates"
+        android:fontFamily="@font/my_font"
+        android:textSize="30sp"
+        android:textColor="@color/text_currency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/chartFavorite" />
+
+    <TextView
+        android:id="@+id/chartFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="200dp"
+        android:fontFamily="@font/text_font"
+        android:text="@string/favorite"
+        android:textColor="@color/text_currency"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundGuideline"/>
+
+    <TextView
+        android:id="@+id/underlineGuideline2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/underline"
+        app:layout_constraintTop_toBottomOf="@+id/chartFavorite" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/backgroundGuideline"
         android:layout_width="wrap_content"

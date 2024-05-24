@@ -30,5 +30,7 @@
     <string name="GBP_currencyRate">1 GBP = 1.27255 USD</string>
     <string name="GBP">GBP to USD</string>
     <string name="resetEmailText">Enter your email to reset your password</string>
+    <string name="favorite">Favorite</string>
+    <string name="rates">Rates</string>
 
 </resources>
