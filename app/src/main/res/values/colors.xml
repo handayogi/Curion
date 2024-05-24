@@ -5,6 +5,7 @@
     <color name="text">#EEEEEE</color>
     <color name="loading">#B4D4FF</color>
     <color name="background">#15151C</color>
+    <color name="onboardingColor">#DFF5FF</color>
     <color name="buttonColor">#3A78C8</color>
     <color name="colorAccent">#B4D4FF</color>
     <color name="colorPrimaryDark">#67C6E3</color>
@@ -15,4 +16,5 @@
     <color name="downLineChart">#E16767</color>
     <color name="inputBorder">#76ABAE</color>
     <color name="menuColor">#1A1A25</color>
+    <color name="indicatorColor">#31363F</color>
 </resources>

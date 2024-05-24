@@ -7,6 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".chart.ChartActivity">
 
+    <ImageView
+        android:id="@+id/favImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/outline_star_border" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

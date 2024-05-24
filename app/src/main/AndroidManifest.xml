@@ -16,6 +16,15 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
+            android:name=".favorites.FavoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".favorites.FavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".weather.WeatherActivity"
+            android:exported="false" />
+        <activity
             android:name=".chart.ChartActivity"
             android:exported="false" />
         <activity

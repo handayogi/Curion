@@ -69,7 +69,7 @@ class ConvertFragment : Fragment() {
 
     private fun getApiResult() {
         if (editFromCurrency.text.isNotEmpty() && editFromCurrency.text.isNotBlank()) {
-            val api = "https://api.currencyapi.com/v3/latest?apikey=cur_live_jPaP565zswh8xCtGhHHgE5eTt9o30v0p96cu0Tfd"
+            val api = "https://v6.exchangerate-api.com/v6/424b60014bc4901886ddb931/latest/$baseCurrency"
 
             if (baseCurrency == convertedToCurrency) {
                 Toast.makeText(context, "Please pick a currency to convert", Toast.LENGTH_SHORT).show()
@@ -78,17 +78,29 @@ class ConvertFragment : Fragment() {
                     try {
                         val apiResult = URL(api).readText()
                         val jsonObject = JSONObject(apiResult)
-                        conversionRate = jsonObject.getJSONObject("data").getJSONObject(convertedToCurrency).getString("value").toFloat()
+                        if (jsonObject.getString("result") == "success") {
+                            val conversionRates = jsonObject.getJSONObject("conversion_rates")
+                            if (conversionRates.has(convertedToCurrency)) {
+                                conversionRate = conversionRates.getString(convertedToCurrency).toFloat()
 
-                        Log.d("Main", "$conversionRate")
-                        Log.d("Main", apiResult)
-
-                        withContext(Dispatchers.Main) {
-                            val text = ((editFromCurrency.text.toString().toFloat()) * conversionRate).toString()
-                            editToCurrency.setText(text)
+                                withContext(Dispatchers.Main) {
+                                    val text = ((editFromCurrency.text.toString().toFloat()) * conversionRate).toString()
+                                    editToCurrency.setText(text)
+                                }
+                            } else {
+                                withContext(Dispatchers.Main) {
+                                    Toast.makeText(context, "Currency not found", Toast.LENGTH_SHORT).show()
+                                }
+                            }
+                        } else {
+                            withContext(Dispatchers.Main) {
+                                Toast.makeText(context, "API request failed", Toast.LENGTH_SHORT).show()
+                            }
                         }
                     } catch (e: Exception) {
-                        Log.e("Main", "ISSUE: $e")
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(context, "Please Input Amount", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
             }
